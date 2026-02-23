@@ -1,3 +1,4 @@
+#include "Character.h"
 #include <iostream>
 #include <string>
 
@@ -77,7 +78,10 @@ int main()
 	calc.reset();
 	std::cout << calc.getValue() << '\n'; // prints 0
 
+	Character c("BOB", 20, 100, 25);
+	c.print();
 	return 0;
+	
 }
 
 
