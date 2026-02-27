@@ -134,7 +134,10 @@ namespace MonsterGenerator
 
     Monster generate()
     {
-        return Monster{ static_cast<Monster::MonsterType>(RandomNumber(0, Monster::maxMonsterTypes - 1)), getName(RandomNumber(0, 5)), getRoar(RandomNumber(0, 5)), RandomNumber(0, 100)};
+        return Monster{ static_cast<Monster::MonsterType>(RandomNumber(0, Monster::maxMonsterTypes - 1)),
+            getName(RandomNumber(0, 5)),
+            getRoar(RandomNumber(0, 5)),
+            RandomNumber(0, 100)};
     }
 }
 
