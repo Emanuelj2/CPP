@@ -127,8 +127,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="TaksManager.cpp" />
     <ClCompile Include="Task.cpp" />
-    <ClCompile Include="TaskManager.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="User.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -6,7 +6,7 @@
 
 class Task
 {
-private:
+public:
 	static int s_nextId; //used to generate unique IDs for tasks
 
 	enum class Priority
@@ -22,7 +22,7 @@ private:
 		int month{};
 		int year{};
 	};
-
+private:
 	int m_id{};
 	std::string m_name{};
 	std::string m_description{};
