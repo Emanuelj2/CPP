@@ -2,10 +2,13 @@
 //
 
 #include <iostream>
-#include "TaskManager.h"
+#include "Task.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	Task t1{ "Task 1", "Description of Task 1", Task::Priority::High, 15, 10, 2024 };
+	t1.displayTask();
+
+    
 }
 
