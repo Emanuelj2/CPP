@@ -1,5 +1,7 @@
 #include "User.h"
 #include <iostream>
+#include <chrono>
+#include <thread>
 
 int User::s_nextId{ 1 };
 
@@ -30,13 +32,23 @@ void User::setName(std::string_view name)
 
 void User::workOnTask(int taskId)
 {
-	for (const auto& task : m_task)
+	for (auto it = m_task.begin(); it != m_task.end(); ++it)
 	{
-		if (task.getId() == taskId)
+		if (it->getId() == taskId)
 		{
-			std::cout << "Working on task: " << task.getName() << "..." << std::endl;
+			std::cout << "Working on task: " << it->getName() << "..." << std::endl;
+			std::this_thread::sleep_for(std::chrono::milliseconds(500));
+			std::cout << "Finished task " << it->getName() << std::endl;
+			m_task.erase(it);  // remove the task
 			return;
 		}
 	}
 	std::cout << "Task with ID " << taskId << " not found." << std::endl;
+}
+
+
+//TODO: 
+void User::assignTask(Task task)
+{
+	m_task.push_back(task);
 }

@@ -23,8 +23,9 @@ public:
 
 	//setters
 	void setName(std::string_view name);
-
 	void workOnTask(int taskId);
+
+	void assignTask(Task task);
 
 };
 
